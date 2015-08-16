@@ -1,5 +1,7 @@
 Annotater
 =============
+https://github.com/thebrettd/annotater
+
 A Patricia Trie is selected as the backing data structure for operations.
 
 Trie Implememation provided by Apache Commons:
@@ -11,6 +13,8 @@ Spring Boot will launch an embedded tomcat server on port 8080 by default.
 
 From Source
 -------------
+Source available at https://github.com/thebrettd/annotater
+
 Navigate to the project root (where pom.xml is located), and run the maven command: 'mvn spring-boot:run'
 As long as maven is installed with access to the Maven Central Repository dependencies should be downloaded automagically.
 

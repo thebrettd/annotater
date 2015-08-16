@@ -84,7 +84,20 @@ and then again visited, ad infinitum.
 
 Runtime complexity
 -------------
-O(N*K) where N is the size of input and K is the number of bits in the largest item in the tree.
+O(2N * K * K) => O(N) where N is the size of input and K is the number of bits in the largest item in the tree.
+
+The entire document must scanned by the algorithm twice, once to create the original DOM object, and then once again to 
+find and replace all the names with links. 
+
+K is a constant for the duration of the annotation processs, so it is dominated by N. 
+
+While scanning the document, a 'current word' is built up character by character. As new letters are added to the 'current word'
+a SubMap of words for which 'current word' is a prefix is extracted from the Trie. If we detect that the 'current word' 
+is not a prefix for any keys in the map, we move to the next word in the document.
+
+Cost to compute this SubMap is again determined by K, the number of bits of the largest item in the tree, and is a constant
+for the duration of the annotation process.
+
 
 Other Notes/Comments
 =============
